@@ -2,15 +2,14 @@ package model;
 
 public class And3Gate extends Gate{
     private final NandGate nand1;
-    private final NandGate nand2;
     private final NandGate nand3;
     private final NandGate nand4;
 
-    public And3Gate() {
+    public And3Gate(){
         super("AND3", 3);
 
         nand1 = new NandGate();
-        nand2 = new NandGate();
+        NandGate nand2 = new NandGate();
         nand3 = new NandGate();
         nand4 = new NandGate();
 
