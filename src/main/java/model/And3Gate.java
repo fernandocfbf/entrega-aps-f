@@ -5,7 +5,7 @@ public class And3Gate extends Gate{
     private final NandGate nand3;
     private final NandGate nand4;
 
-    public And3Gate(){
+    public And3Gate() {
         super("AND3", 3);
 
         nand1 = new NandGate();
@@ -29,7 +29,7 @@ public class And3Gate extends Gate{
     }
 
     @Override
-    public void connect(int inputIndex, Emitter emitter) {
+    public void connect(int inputIndex, Emitter emitter){
         if (inputIndex < 0 || inputIndex > 2) {
             throw new IndexOutOfBoundsException(inputIndex);
         }
