@@ -19,6 +19,7 @@ public class APS {
         model.add(new OrGate());
         model.add(new AndGate());
         model.add(new NotGate());
+        model.add(new And3Gate());
 
         // Constrói a visão, que também é um controlador.
         // Juntar visão e controlador prejudica a coesão,

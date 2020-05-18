@@ -39,7 +39,6 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
 
         int inputSize = portao.getInputSize();
 
-
         for (int i = 0; i < inputSize; i++) {
             entradas.add(i, new JCheckBox());
             cabos.add(i, new Switch());
@@ -59,11 +58,18 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
         int inicial = (incremento / 2);
 
         for (JCheckBox caixa : entradas) {
-            caixa.addActionListener(this);
-            add(caixa, 7, inicial + y, 20, 25);
-            System.out.println(inicial + y);
-            y += incremento - 40;
+            if (inputSize == 3){
+                caixa.addActionListener(this);
+                add(caixa, 7, 45 + y, 20, 25);
+                System.out.println(inicial + y);
+                y += incremento/2;
 
+            }else {
+                caixa.addActionListener(this);
+                add(caixa, 7, inicial + y, 20, 25);
+                System.out.println(inicial + y);
+                y += incremento - 40;
+            }
 
         }
 
