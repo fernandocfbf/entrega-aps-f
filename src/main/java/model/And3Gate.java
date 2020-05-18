@@ -1,6 +1,6 @@
 package model;
 
-public class And3Gate extends Gate{
+public class And3Gate extends Gate {
     private final NandGate nand1;
     private final NandGate nand3;
     private final NandGate nand4;
@@ -29,15 +29,17 @@ public class And3Gate extends Gate{
     }
 
     @Override
-    public void connect(int inputIndex, Emitter emitter){
+    public void connect(int inputIndex, Emitter emitter) {
         if (inputIndex < 0 || inputIndex > 2) {
             throw new IndexOutOfBoundsException(inputIndex);
         }
 
-        if (inputIndex == 0){
+        if (inputIndex == 0) {
             nand1.connect(0, emitter);
-        }else if (inputIndex == 1){
+        } else if (inputIndex == 1) {
             nand1.connect(1, emitter);
-        }else {nand3.connect(1, emitter);}
+        } else {
+            nand3.connect(1, emitter);
+        }
     }
 }
